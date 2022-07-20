@@ -1,6 +1,3 @@
-<!--Custom Script Starts-->
-    <script>
-      //<![CDATA[ 
   var Tags = document.querySelector(".tags_Categ .tags");
   var Catgs = document.querySelector(".tags_Categ .categ");
   var Loader = document.querySelector(".Vidloader");
@@ -49,8 +46,5 @@
         Loader.innerHTML += iframeTag1 +  sites[siteSelector-1]+ Src +"/embed" + iframeTag2;
     }
   }
-	LoadTagsCats();
-	//]]>
-      
-    </script>
-        <!--Custom Script Ends-->
+LoadTagsCats();
+	
