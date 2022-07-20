@@ -1,5 +1,4 @@
 <!--Custom Script Starts-->
-        <b:if cond='data:view.isPost'>
     <script>
       //<![CDATA[ 
   var Tags = document.querySelector(".tags_Categ .tags");
@@ -54,5 +53,4 @@
 	//]]>
       
     </script>
-  </b:if>
         <!--Custom Script Ends-->
