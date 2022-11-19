@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .Custom-Head{display:flex;}
+        .Custom-Head img {height: 200px !important;
+          border-radius: 10px;
+          padding: 5px;}
+        .Custom-Head span p{padding:10px 5px; margin:0}
+        
+        .custom-contTypes {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+        .custom-contTypes span {
+          padding: 5px 10px;
+          margin: 10px;
+          border-radius: 50px;
+          border: 2px solid white;
+          background-color: #f57c00;
+          color: white;
+          cursor: pointer;
+      }
+        .custom-socialLinks {
+          display: flex;
+      }
+        .custom-socialLinks a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 5px;
+      }
+        .custom-socialLinks a img{height: 40px !important;}
+        div#Bioimg {
+          display: flex;
+          flex-wrap: wrap;
+      }
+        .custom-Images, .custom-Videos{display:none;}
+        div#Bioimg a {
+          width: 30%;
+          padding: 8px;
+      }
+      div#Bioimg a img{
+          width: 100%;
+      }
+      </style>
+      <div class="Custom-Head">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyk5-BkfBtLB5-M45P4JsdDD99KXfNyjJlarTReNrqVLIyLCyy71CAY6a7n7X5MsIbiBw1tZyXpXYPK6dn0_KJEKgK0Jn6iMWxZjUoYGxj0shAbkYbkjcxwl9Xn4-Wrxq09_F0To1goh3qVDZyhthTiBHszkZc1natyZeexaOiOOFLFJPEgyTqF4Q8jg/s1600/evalong_mbb%5B1%5D.jpg" alt="">
+        <span>
+          <p><b>Name:</b> </p>
+          <p><b>DOB:</b> </p>
+        </span>
+      </div>
+      <h2> Biography</h2>
+      <p></p>
+          
+      <div class="custom-contTypes">
+        <span id="Bio">Bio and Stats</span>
+        <span id="Pho">Photos</span>
+        <span id="Vid">Videos</span>
+      </div>
+          <div class="custom-container">
+              <div class="custom-Bio">
+                <h2>Bio and Stats</h2>
+                  <table>
+                      <tr><th colspan="2">Full Bio</th></tr>
+                      <tr><th>On Screen Name :</th><td></td></tr>
+                      <tr><th>Real Name :</th><td></td></tr>
+                      <tr><th>Other Name :</th><td></td></tr>
+                      <tr><th>DOB :</th><td><span id="age"></span></td></tr>
+                      <tr><th colspan="2">Physical Stats</th></tr>
+                      <tr><th>Height :</th><td></td></tr>
+                      <tr><th>Weight :</th><td></td></tr>
+                      <tr><th>Measurements :</th><td></td></tr>
+                      <tr><th>Eye Colour :</th><td></td></tr>
+                      <tr><th>Hair Colour :</th><td></td></tr>
+                      <tr><th>Ethenicity :</th><td></td></tr>
+                      <tr><th colspan="2">Personal Details</th></tr>
+                      <tr><th>Nationality :</th><td></td></tr>
+                      <tr><th>Education :</th><td></td></tr>
+                      <tr><th>Family Members :</th><td></td></tr>
+                      <tr><th>Notable Work :</th><td></td></tr>
+                      <tr><th>Hobbies :</th><td></td></tr>
+                  </table>
+                  <div class="custom-socialLinks">
+                      <a href="">
+                        <img src="https://www.transparentpng.com/thumb/logo-instagram/wIIEDc-logo-instagram-cut-out.png" alt="">Instagram</a>
+                      <a href="">
+                        <img src="https://www.transparentpng.com/thumb/twitter/twitter-png-3.png" alt="">Twitter</a>
+                      <a href="">
+                        <img src="https://www.transparentpng.com/thumb/globe/dotted-digital-globe-png-images--KOu0IR.png" alt="">WebSite</a>
+                  </div>
+              </div>
+            <div class="custom-Images">
+              <h2> Photos</h2>
+              <div id="Bioimg"></div>
+            </div>
+            <div class="custom-Videos">
+              <h2> Videos</h2>
+              <span id="VidID"></span>
+            </div>
+          </div>
+      
+      <script>
+         var Phots = ["https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20170213124216_DSC_0671.jpg&w=726&h=482&q=75&c=1",
+                      "https://compare.pricesofindia.com/src/news/2020/07/17/BS6-Bajaj-Pulsar-RS-200-Price-Hiked-PricesOfIndia.jpg",
+                      "https://ic1.maxabout.us/autos/tw_india//B/2021/5/bajaj-pulsar-rs125-rendered-image-by-iab.jpg",
+                      "https://i.ytimg.com/vi/xmv-2FSGNt8/maxresdefault.jpg",
+                      "https://www.rashgear.com/wp-content/uploads/2021/06/Bajaj-Pulsar-RS-125-Price-in-India-Launch-Date-Mileage-Top-Speed-Image-RG.jpg",
+                      "https://compare.pricesofindia.com/src/wallpapers/bajaj/bajaj-pulsar-rs-400/pulsar-rs-400-wallpaper-1.jpg"
+                      ];
+        
+        var bioimgContainer = "Bioimg";
+        function LoadPhotos(PhotsEle,ContainerEle)
+        {
+          var Content = "";
+          var CusContainer = document.getElementById(ContainerEle);
+          for(i=0;i<PhotsEle.length;i++)
+          {
+            Content += "<a data-fancybox='Photos' href='"+Phots[i]+"'><img loading='lazy' src='"+PhotsEle[i].trim()+"'></a>"
+          }
+          CusContainer.innerHTML  = Content;
+        }
+        
+        LoadPhotos(Phots,bioimgContainer);
+          
+        var bioBtn = document.getElementById("Bio");
+        var PhoBtn = document.getElementById("Pho");
+        var VidBtn = document.getElementById("Vid");
+        
+        bioBtn.addEventListener("click",function(){
+          document.querySelector(".custom-Bio").style.display = "block";
+          document.querySelector(".custom-Images").style.display = "none";
+          document.querySelector(".custom-Videos").style.display = "none";
+        });
+        
+        PhoBtn.addEventListener("click",function(){
+          document.querySelector(".custom-Bio").style.display = "none";
+          document.querySelector(".custom-Images").style.display = "block";
+          document.querySelector(".custom-Videos").style.display = "none";
+          
+          $(document).ready(function(){
+              $('#VidID').load('https://adulttimesaga.blogspot.com/search/label/Eva%20Long #Blog1 .blog-posts');
+            });
+        });
+        
+        VidBtn.addEventListener("click",function(){
+          document.querySelector(".custom-Bio").style.display = "none";
+          document.querySelector(".custom-Images").style.display = "none";
+          document.querySelector(".custom-Videos").style.display = "block";
+        });
+      </script>
+</body>
+</html>
