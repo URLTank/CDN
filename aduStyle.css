@@ -1,0 +1,109 @@
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    width: 540px;
+}
+
+.loader .thumb{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loader .ply-btn{
+    position: absolute;
+    width: 100px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+}
+.loader .ply-btn:hover{
+    filter: brightness(0.8);
+}
+.model_netw{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.model_netw span{
+    margin: 5px 0;
+}
+.tags_Categ{
+    display: flex;
+    flex-direction: column;
+}
+
+.tags_Categ span{
+    display:  flex;
+    margin: 5px 0px;
+}
+
+.tags_Categ .tags, .tags_Categ .categ{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags_Categ .tags a , .tags_Categ .categ a, .model_netw .model a, .model_netw .model_Channel a{
+    margin: 0 5px;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.actionBtns {
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #808080b0;
+}
+
+.actionBtns span
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px;
+}
+.actionBtns span a{
+    padding: 15px;
+    margin: 5px;
+    background-color: #c10b0b;
+    color: #fff;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.series{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.series a{
+    width: 32%;
+    padding: 5px;
+}
+
+.series a img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
