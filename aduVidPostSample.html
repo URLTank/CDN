@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loader">
+        <img class="thumb" src="7818.jpg" alt="">
+        <img class="ply-btn" src="plybutton.png" alt="">
+        <!-- Thumb and Playbutton-->
+    </div>
+    <div class="stoylne">
+        <h2>Storyline- </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quibusdam quo quis pariatur minima? Consectetur, enim. Veniam nobis fuga provident dolorem doloremque neque voluptatum corporis? Aut suscipit eius iusto repellat.</p>
+    </div>
+    <div class="model_netw">
+        <span class="model"></span>
+        <span class="model_Channel"></span>
+        <span class="website"></span>
+    </div>
+    <div class="tags_Categ">
+        <span>
+            <span class="tags"></span>
+        </span>
+        <span>
+            <span class="categ"></span>
+        </span>
+    </div>
+    <div style="display: none;">
+        <span id="models_DB">
+            Model Title1,Link1,
+            Model Title2,Link2,
+            Model Title3, Links3
+        </span>
+
+        <span id="Channels_DB">
+            Family Therapy, Link4
+        </span>
+    </div>
+    <div class="series">
+        <a href="">
+            <img src="7818.jpg" alt="">
+            <p>next part</p>
+        </a>
+        <a href="">
+            <img src="7818.jpg" alt="">
+            <p>part3</p>
+        </a>
+        <a href="">
+            <img src="7818.jpg" alt="">
+            <p>part 4</p>
+        </a>
+    </div>
+    <div class="actionBtns">
+        <span>
+            <p>Unable to Stream at the Moment. But you can download and watch on your smartphone using MX-Player</p>
+            <a href="" class="download">Download</a>
+        </span>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        var models = document.getElementById("models_DB").innerHTML;
+        var Channel = document.getElementById("Channels_DB").innerHTML;
+        var website = [["site", "Link5"]];
+        var Tags = ["Tags1","Tags2","Tags3","Tags4","Tags5","Tags6"];
+        var Categories = ["Cate1","cate2","Cate3","Cate4"];
+
+        addArtists(models, Channel,website);
+        LoadTagsCats(Tags, Categories);
+        //61472569
+        //LoadFrame(0, '<iframe src="https://xhamster.com/embed/NICHE" scrolling="no" allowfullscreen="" width="640" height="480" frameborder="0"></iframe>')
+        var plybtn  = document.querySelector('.loader .ply-btn');
+        plybtn.addEventListener('click', function() {
+            LoadFrame(5, '71tfe');
+        });
+    </script>
+</body>
+</html>
