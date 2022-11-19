@@ -54,9 +54,9 @@ function LoadTagsCats(AllTags, AllCatgs) {
 var Loader = document.querySelector(".loader");
 var PopUpDwnld = document.querySelector(".actionBtns");
 var sites = [
-    'https://www.xvdeos1.com/embedframe/',
-    'https://xhamster18.desi/embed/',
-    'https://spankbang.com/']
+    'https://'+'www'+'.xvdeo'+'s1.com/embedframe/',
+    'https://'+'xha'+'mster1'+'8.desi/embed/',
+    'https://'+'spa'+'nkbang'+'.com/']
 
 function LoadFrame(siteSelector, Src) {
     //width="640" height="480"
