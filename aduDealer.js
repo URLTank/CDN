@@ -22,7 +22,7 @@ function addArtists(models, Channels,website){
         Channel2Add += "<a href='" + ChannelDB[i + 1].trim() + "'>" + ChannelDB[i].trim() + "</a>";
     
     for (i = 0; i < website.length; i++)
-        Site2Add += "<a href='"+website[i][1]+"'>" + website[i][0] + "</a>";
+        Site2Add += "<a href='"+website[i][1]+"' target='_blank'>" + website[i][0] + "</a>";
 
     document.querySelector(".model_netw .model").innerHTML = Models2Add;
     document.querySelector(".model_netw .model_Channel").innerHTML = Channel2Add;
