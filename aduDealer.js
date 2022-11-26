@@ -51,15 +51,15 @@ function LoadTagsCats(AllTags, AllCatgs) {
     tagsElement.innerHTML += "<h2>Tags- </h2>"+ tagsContent;
 }
 
-var Loader = document.querySelector(".loader");
 var PopUpDwnld = document.querySelector(".actionBtns");
 var sites = [
     'https://'+'www'+'.xvdeo'+'s1.com/embedframe/',
     'https://'+'xha'+'mster1'+'8.desi/embed/',
     'https://'+'spa'+'nkbang'+'.com/']
 
-function LoadFrame(siteSelector, Src) {
+function LoadFrame(siteSelector, Src,LoaderClass) {
     //width="640" height="480"
+    var Loader = document.querySelector(LoaderClass);
     var iframeTag1 = '<iframe src="';
     var iframeTag2 = '" scrolling="no" autoplay="true" allowfullscreen="" width="100%" height="100%"  frameborder="0"></iframe>';
     Loader.innerHTML = "";
