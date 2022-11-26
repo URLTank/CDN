@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .PostImg-container{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <div class="PostImg-container">
+        
+    </div>
+    <script>
+        var ImgsList = [
+        "https://images.pexels.com/photos/414102/pexels-photo-414102.jpeg?cs=srgb&dl=pexels-pixabay-414102.jpg&fm=jpg",
+        "https://images.unsplash.com/photo-1509043759401-136742328bb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
+        "https://www.heysigmund.com/wp-content/uploads/call-her-beautiful.jpeg",
+        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+        ];
+
+        var ImgsContainer= document.querySelector(".PostImg-container");
+        var ImagesGallery= "";
+        for(i = 0; i<ImgsList.length;i++){
+            ImagesGallery += "<a href='"+ImgsList[i].trim()+"'data-fancybox='Photos'><img src='"+ImgsList[i].trim()+"' alt=''></a>"
+        }
+
+        ImgsContainer.innerHTML="";
+        ImgsContainer.innerHTML=ImagesGallery;
+    </script>
+</body>
+</html>
