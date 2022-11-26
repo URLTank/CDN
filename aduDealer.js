@@ -37,13 +37,13 @@ function LoadTagsCats(AllTags, AllCatgs) {
     
     var tagsContent = "",CatgsContent = "", Alink = "";
     for (i = 0; i < AllTags.length; i++){
-        Alink = "<a href='"+"/search/?q="+AllTags[i]+"'>" +AllTags[i]+ "</a>";
+        Alink = "<a href='"+"/search/?q="+AllTags[i].trim()+"'>" +AllTags[i].trim()+ "</a>";
         tagsContent += Alink;
     }
 
     Alink = "";
     for (i = 0; i < AllCatgs.length; i++){
-        Alink = "<a href='"+"/search/?q="+AllCatgs[i]+"'>" +AllCatgs[i]+ "</a>";
+        Alink = "<a href='"+"/search/?q="+AllCatgs[i].trim()+"'>" +AllCatgs[i].trim()+ "</a>";
         CatgsContent += Alink;
     }
 
